@@ -13,7 +13,8 @@ var Map = {
       d > 50   ? '#FD8D3C' :
       d > 20   ? '#FEB24C' :
       d > 10   ? '#FED976' :
-      '#FFEDA0';
+      d > 0   ? '#FFEDA0' :
+      '#D9D9D9';
   },
 
   style: function(feature) {
@@ -100,7 +101,7 @@ var Map = {
     var getColor = $.proxy(this.getColor, this);
     legend.onAdd = function (map) {
       var div = L.DomUtil.create('div', 'info legend'),
-      grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+      grades = [1, 10, 20, 50, 100, 200, 500, 1000],
       labels = [],
       from, to;
 
