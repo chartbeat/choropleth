@@ -1,5 +1,3 @@
-// heavily "inspired" by: http://leaflet.cloudmade.com/examples/choropleth.html
-
 var Map = {
   // Update backend data every X ms
   interval: 3000,
